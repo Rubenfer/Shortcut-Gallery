@@ -80,5 +80,27 @@ struct Shortcut: Codable {
         }.resume()
         
     }
+    
+    static func search(_ keyword: String, completion: @escaping ShortcutsResponseBlock) {
+        
+        guard let url = URL(string: "https://sharecuts.app/api/shortcuts/latest") else {
+            completion(ShortcutResponse(count: 0, results: []))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!)
+            } else if let data = data {
+                do {
+                    let shortcuts = try JSONDecoder().decode(ShortcutResponse.self, from: data)
+                    completion(shortcuts)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            }.resume()
+        
+    }
 }
 
