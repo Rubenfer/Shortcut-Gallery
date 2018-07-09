@@ -30,9 +30,6 @@ class GalleryTableViewController: UITableViewController {
         tableView.separatorStyle = .none
         tableView.contentInset.top = 30
         
-        let searchBtn = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
-        self.navigationItem.setRightBarButtonItems([searchBtn], animated: true)
-        
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
         
@@ -53,7 +50,7 @@ class GalleryTableViewController: UITableViewController {
             let textToSearch = alert.textFields?.first?.text
             Shortcut.search(textToSearch!) { (response) in
                 DispatchQueue.main.async {
-                    self.dataSource.shortcuts = response.results
+                    self.dataManager.shortcuts = response.results
                     self.tableView.reloadData()
                     self.refreshControl?.endRefreshing()
                 }
