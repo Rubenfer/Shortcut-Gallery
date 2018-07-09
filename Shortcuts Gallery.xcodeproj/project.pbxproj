@@ -13,7 +13,7 @@
 		4C1D795A20F3576500D66622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D795820F3576500D66622 /* LaunchScreen.storyboard */; };
 		4C1D796520F3576500D66622 /* Shortcuts_GalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D796420F3576500D66622 /* Shortcuts_GalleryTests.swift */; };
 		4C1D797020F3576500D66622 /* Shortcuts_GalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D796F20F3576500D66622 /* Shortcuts_GalleryUITests.swift */; };
-		4C1D797E20F3580300D66622 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D797D20F3580300D66622 /* GalleryDataSource.swift */; };
+		4C1D797E20F3580300D66622 /* GalleryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D797D20F3580300D66622 /* GalleryDataManager.swift */; };
 		4C1D798020F3589300D66622 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D797F20F3589300D66622 /* Shortcut.swift */; };
 		4C1D798120F3589300D66622 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D797F20F3589300D66622 /* Shortcut.swift */; };
 		4C1D798220F3589300D66622 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D797F20F3589300D66622 /* Shortcut.swift */; };
@@ -32,6 +32,9 @@
 		4C1D799C20F36BF700D66622 /* ShortcutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */; };
 		4C1D799D20F36BF700D66622 /* ShortcutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */; };
 		4C1D799E20F36BF700D66622 /* ShortcutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */; };
+		4CADD13F20F396F900267F16 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADD13D20F396F900267F16 /* AboutTableViewController.swift */; };
+		4CADD14020F396F900267F16 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADD13D20F396F900267F16 /* AboutTableViewController.swift */; };
+		4CADD14120F396F900267F16 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADD13D20F396F900267F16 /* AboutTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,13 +67,14 @@
 		4C1D796B20F3576500D66622 /* Shortcuts GalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shortcuts GalleryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1D796F20F3576500D66622 /* Shortcuts_GalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts_GalleryUITests.swift; sourceTree = "<group>"; };
 		4C1D797120F3576500D66622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C1D797D20F3580300D66622 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
+		4C1D797D20F3580300D66622 /* GalleryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataManager.swift; sourceTree = "<group>"; };
 		4C1D797F20F3589300D66622 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		4C1D798B20F35C3600D66622 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
 		4C1D798C20F35C3600D66622 /* GalleryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryTableViewCell.xib; sourceTree = "<group>"; };
 		4C1D799320F3633400D66622 /* ShortcutDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutDetail.swift; sourceTree = "<group>"; };
 		4C1D799720F3639100D66622 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutResponse.swift; sourceTree = "<group>"; };
+		4CADD13D20F396F900267F16 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +127,7 @@
 			children = (
 				4C1D794F20F3576300D66622 /* AppDelegate.swift */,
 				4C1D795120F3576300D66622 /* GalleryTableViewController.swift */,
-				4C1D797D20F3580300D66622 /* GalleryDataSource.swift */,
+				4C1D797D20F3580300D66622 /* GalleryDataManager.swift */,
 				4C1D795620F3576500D66622 /* Assets.xcassets */,
 				4C1D795820F3576500D66622 /* LaunchScreen.storyboard */,
 				4C1D795B20F3576500D66622 /* Info.plist */,
@@ -133,6 +137,7 @@
 				4C1D799320F3633400D66622 /* ShortcutDetail.swift */,
 				4C1D799720F3639100D66622 /* User.swift */,
 				4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */,
+				4CADD13D20F396F900267F16 /* AboutTableViewController.swift */,
 			);
 			path = "Shortcuts Gallery";
 			sourceTree = "<group>";
@@ -294,8 +299,9 @@
 				4C1D795020F3576300D66622 /* AppDelegate.swift in Sources */,
 				4C1D799C20F36BF700D66622 /* ShortcutResponse.swift in Sources */,
 				4C1D798D20F35C3600D66622 /* GalleryTableViewCell.swift in Sources */,
-				4C1D797E20F3580300D66622 /* GalleryDataSource.swift in Sources */,
+				4C1D797E20F3580300D66622 /* GalleryDataManager.swift in Sources */,
 				4C1D799820F3639100D66622 /* User.swift in Sources */,
+				4CADD13F20F396F900267F16 /* AboutTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +313,7 @@
 				4C1D796520F3576500D66622 /* Shortcuts_GalleryTests.swift in Sources */,
 				4C1D798120F3589300D66622 /* Shortcut.swift in Sources */,
 				4C1D799520F3633400D66622 /* ShortcutDetail.swift in Sources */,
+				4CADD14020F396F900267F16 /* AboutTableViewController.swift in Sources */,
 				4C1D799920F3639100D66622 /* User.swift in Sources */,
 				4C1D798E20F35C3600D66622 /* GalleryTableViewCell.swift in Sources */,
 			);
@@ -320,6 +327,7 @@
 				4C1D797020F3576500D66622 /* Shortcuts_GalleryUITests.swift in Sources */,
 				4C1D798220F3589300D66622 /* Shortcut.swift in Sources */,
 				4C1D799620F3633400D66622 /* ShortcutDetail.swift in Sources */,
+				4CADD14120F396F900267F16 /* AboutTableViewController.swift in Sources */,
 				4C1D799A20F3639100D66622 /* User.swift in Sources */,
 				4C1D798F20F35C3600D66622 /* GalleryTableViewCell.swift in Sources */,
 			);
