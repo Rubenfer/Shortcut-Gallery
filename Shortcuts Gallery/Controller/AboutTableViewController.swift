@@ -12,7 +12,7 @@ class AboutTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView = UITableView(frame: view.frame, style: UITableView.Style.grouped)
+        tableView = UITableView(frame: view.frame, style: UITableViewStyle.grouped)
         title = "About"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }

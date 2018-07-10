@@ -33,8 +33,6 @@
 		4C1D799D20F36BF700D66622 /* ShortcutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */; };
 		4C1D799E20F36BF700D66622 /* ShortcutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */; };
 		4CADD13F20F396F900267F16 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADD13D20F396F900267F16 /* AboutTableViewController.swift */; };
-		4CADD14020F396F900267F16 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADD13D20F396F900267F16 /* AboutTableViewController.swift */; };
-		4CADD14120F396F900267F16 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADD13D20F396F900267F16 /* AboutTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				4C1D794E20F3576300D66622 /* Shortcuts Gallery */,
+				4CE4C6F720F4E8C50090DF7F /* Supporting Files */,
 				4C1D796320F3576500D66622 /* Shortcuts GalleryTests */,
 				4C1D796E20F3576500D66622 /* Shortcuts GalleryUITests */,
 				4C1D794D20F3576300D66622 /* Products */,
@@ -125,19 +124,10 @@
 		4C1D794E20F3576300D66622 /* Shortcuts Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				4C1D794F20F3576300D66622 /* AppDelegate.swift */,
-				4C1D795120F3576300D66622 /* GalleryTableViewController.swift */,
-				4C1D797D20F3580300D66622 /* GalleryDataManager.swift */,
-				4C1D795620F3576500D66622 /* Assets.xcassets */,
-				4C1D795820F3576500D66622 /* LaunchScreen.storyboard */,
 				4C1D795B20F3576500D66622 /* Info.plist */,
-				4C1D798B20F35C3600D66622 /* GalleryTableViewCell.swift */,
-				4C1D798C20F35C3600D66622 /* GalleryTableViewCell.xib */,
-				4C1D797F20F3589300D66622 /* Shortcut.swift */,
-				4C1D799320F3633400D66622 /* ShortcutDetail.swift */,
-				4C1D799720F3639100D66622 /* User.swift */,
-				4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */,
-				4CADD13D20F396F900267F16 /* AboutTableViewController.swift */,
+				4CE4C6F520F4E88F0090DF7F /* Model */,
+				4CE4C6F620F4E8A60090DF7F /* View */,
+				4CE4C6F420F4E8790090DF7F /* Controller */,
 			);
 			path = "Shortcuts Gallery";
 			sourceTree = "<group>";
@@ -158,6 +148,46 @@
 				4C1D797120F3576500D66622 /* Info.plist */,
 			);
 			path = "Shortcuts GalleryUITests";
+			sourceTree = "<group>";
+		};
+		4CE4C6F420F4E8790090DF7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C1D794F20F3576300D66622 /* AppDelegate.swift */,
+				4C1D795120F3576300D66622 /* GalleryTableViewController.swift */,
+				4C1D797D20F3580300D66622 /* GalleryDataManager.swift */,
+				4CADD13D20F396F900267F16 /* AboutTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4CE4C6F520F4E88F0090DF7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C1D797F20F3589300D66622 /* Shortcut.swift */,
+				4C1D799320F3633400D66622 /* ShortcutDetail.swift */,
+				4C1D799720F3639100D66622 /* User.swift */,
+				4C1D799B20F36BF700D66622 /* ShortcutResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CE4C6F620F4E8A60090DF7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C1D795820F3576500D66622 /* LaunchScreen.storyboard */,
+				4C1D798B20F35C3600D66622 /* GalleryTableViewCell.swift */,
+				4C1D798C20F35C3600D66622 /* GalleryTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CE4C6F720F4E8C50090DF7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C1D795620F3576500D66622 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,7 +343,6 @@
 				4C1D796520F3576500D66622 /* Shortcuts_GalleryTests.swift in Sources */,
 				4C1D798120F3589300D66622 /* Shortcut.swift in Sources */,
 				4C1D799520F3633400D66622 /* ShortcutDetail.swift in Sources */,
-				4CADD14020F396F900267F16 /* AboutTableViewController.swift in Sources */,
 				4C1D799920F3639100D66622 /* User.swift in Sources */,
 				4C1D798E20F35C3600D66622 /* GalleryTableViewCell.swift in Sources */,
 			);
@@ -327,7 +356,6 @@
 				4C1D797020F3576500D66622 /* Shortcuts_GalleryUITests.swift in Sources */,
 				4C1D798220F3589300D66622 /* Shortcut.swift in Sources */,
 				4C1D799620F3633400D66622 /* ShortcutDetail.swift in Sources */,
-				4CADD14120F396F900267F16 /* AboutTableViewController.swift in Sources */,
 				4C1D799A20F3639100D66622 /* User.swift in Sources */,
 				4C1D798F20F35C3600D66622 /* GalleryTableViewCell.swift in Sources */,
 			);
@@ -481,6 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M92GJ8T2S2;
 				INFOPLIST_FILE = "Shortcuts Gallery/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M92GJ8T2S2;
 				INFOPLIST_FILE = "Shortcuts Gallery/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,6 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M92GJ8T2S2;
 				INFOPLIST_FILE = "Shortcuts GalleryTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,6 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M92GJ8T2S2;
 				INFOPLIST_FILE = "Shortcuts GalleryTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,6 +591,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M92GJ8T2S2;
 				INFOPLIST_FILE = "Shortcuts GalleryUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M92GJ8T2S2;
 				INFOPLIST_FILE = "Shortcuts GalleryUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,6 +12,7 @@ import UIKit
 class GalleryDataManager: NSObject {
     var shortcuts: [Shortcut]
     var details = [String: ShortcutDetail]()
+    weak var viewController: UIViewController?
     private var colors = [UIColor(red: 150/255, green: 212/255, blue: 68/255, alpha: 1.0),
                           UIColor(red: 247/255, green: 170/255, blue: 135/255, alpha: 1.0),
                           UIColor(red: 228/255, green: 103/255, blue: 158/255, alpha: 1.0),
@@ -52,7 +53,8 @@ extension GalleryDataManager: UITableViewDataSource {
         let shortcut = shortcuts[indexPath.row]
         cell.titleLabel.text = shortcut.title
         cell.descriptionLabel.text = shortcut.summary
-        cell.box.backgroundColor = colors.randomElement()
+        let randomIndex = Int(arc4random_uniform(UInt32(colors.count)))
+        cell.box.backgroundColor = colors[randomIndex]
         
         getDetail(for: shortcut) { (detail) in
             guard let detail = detail else { return }
@@ -68,14 +70,23 @@ extension GalleryDataManager: UITableViewDataSource {
 
 extension GalleryDataManager: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let shortcut = shortcuts[indexPath.row]
         
-        getDetail(for: shortcut) { (detail) in
-            guard let detail = detail, let deepLink = URL(string: detail.deepLink) else  { return }
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "This will open this shortcut in Shortcuts", message: "Do you want to proceed?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (_) in
+                let shortcut = self.shortcuts[indexPath.row]
+                
+                self.getDetail(for: shortcut) { (detail) in
+                    guard let detail = detail, let deepLink = URL(string: detail.deepLink) else  { return }
+                    
+                    DispatchQueue.main.async {
+                        UIApplication.shared.open(deepLink, options: [:], completionHandler: nil)
+                    }
+                }
+            }))
             
-            DispatchQueue.main.async {
-                UIApplication.shared.open(deepLink, options: [:], completionHandler: nil)
-            }
+            self.viewController?.present(alert, animated: true, completion: nil)
         }
     }
 }

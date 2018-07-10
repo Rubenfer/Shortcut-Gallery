@@ -12,27 +12,12 @@ class GalleryTableViewController: UITableViewController {
     
     let dataManager = GalleryDataManager()
     let searchController = UISearchController(searchResultsController: nil)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Gallery"
-        navigationItem.largeTitleDisplayMode = .always
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let infoButton = UIButton(type: .infoLight)
-        infoButton.addTarget(self, action: #selector(showAbout), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: infoButton)
-        
-        tableView.register(UINib(nibName: "GalleryTableViewCell", bundle: nil), forCellReuseIdentifier: "galleryCell")
-        tableView.dataSource = dataManager
-        tableView.delegate = dataManager
-        tableView.separatorStyle = .none
-        tableView.contentInset.top = 30
-        
-        refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
-        
+        configureNavBar()
+        configureTableView()
         load()
     }
     
@@ -69,6 +54,28 @@ class GalleryTableViewController: UITableViewController {
                 self.refreshControl?.endRefreshing()
             }
         }
+    }
+    
+    private func configureTableView() {
+        tableView.register(UINib(nibName: "GalleryTableViewCell", bundle: nil), forCellReuseIdentifier: "galleryCell")
+        tableView.dataSource = dataManager
+        tableView.delegate = dataManager
+        dataManager.viewController = self
+        tableView.separatorStyle = .none
+        tableView.contentInset.top = 30
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
+    }
+    
+    private func configureNavBar() {
+        title = "Gallery"
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(showAbout), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: infoButton)
     }
 }
 
